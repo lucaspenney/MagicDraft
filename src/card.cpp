@@ -1,10 +1,11 @@
 
 #include "card.h"
 
-Card::Card(int id, std::string name, std::string text) {
+Card::Card(int id, std::string name, std::string text, ManaCost* cost) {
     this->id = id;
     this->name = name;
     this->text = text;
+    this->manaCost = cost;
 }
 
 int Card::getId() {
@@ -17,4 +18,12 @@ std::string Card::getName() {
 
 std::string Card::getText() {
 	return this->text;
+}
+
+ManaCost* Card::getManaCost() {
+    return this->manaCost;
+}
+
+Card::~Card() {
+    delete this->manaCost;
 }

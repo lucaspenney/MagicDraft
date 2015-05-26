@@ -13,9 +13,9 @@ Card* CardFactory::createCardFromJSON(std::string jsonStr) {
 	int id = (d["id"]).GetInt();
 	std::string name = (d["name"]).GetString();
 	std::string text = (d["text"]).GetString();
+    std::string cost = (d["mana_cost"]).GetString();
+    int convertedCost = (d["converted_cost"]).GetInt();
 
-
-
-	return new Card(id, name, text);
+	return new Card(id, name, text, new ManaCost(cost, convertedCost));
 }
 

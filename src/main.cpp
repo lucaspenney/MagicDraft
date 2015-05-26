@@ -12,7 +12,8 @@ int main() {
 
 	Card* c = CardFactory::createCardFromJSON(j);
 	std::cout << c->getName();
-	std::cout << c->getText();
+	std::cout << c->getText() << std::endl;
+    std::cout << c->getManaCost()->getConvertedCost();
 	/*
 	// 1. Parse a JSON string into DOM.
 	const char* json = "{\"project\":\"rapidjson\",\"stars\":10}";
