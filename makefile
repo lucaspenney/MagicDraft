@@ -10,12 +10,12 @@ all: $(PROGRAM)
 
 $(PROGRAM): $(SOURCE)
 
-	$(CC) -I$(INCLUDES) $(SOURCE) -o$(PROGRAM) #-l$(LIBRARIES)
+	$(CC) -std=c++11 -I$(INCLUDES) $(SOURCE) -o$(PROGRAM) #-l$(LIBRARIES)
 
 clean:
 
 	rm -f $(PROGRAM) $(OBJECTS)
-	
+
 
 run: ./$(PROGRAM)
 	./$(PROGRAM)
