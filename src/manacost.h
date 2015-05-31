@@ -1,5 +1,9 @@
 
 #include <string>
+#include <vector>
+#include <memory>
+
+#include "mana.h"
 
 class ManaCost {
 public:
@@ -8,4 +12,6 @@ public:
 private:
 	int convertedCost;
 	std::string cost;
+	std::vector<std::unique_ptr<Mana>> mana;
+	void parseManaCost(std::string fullCost);
 };
