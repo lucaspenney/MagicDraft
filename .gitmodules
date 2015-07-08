@@ -1,0 +1,3 @@
+[submodule "src/include/cppnn"]
+	path = src/include/cppnn
+	url = https://github.com/lucaspenney/cppnn.git
